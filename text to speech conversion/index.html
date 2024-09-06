@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h1>TEXT TO SPEECH </h1>
+    <textarea name="" id="text" cols="30" rows="10"></textarea> <br>
+
+    <!-- <p id=" text"> tedfyiuo</p> -->
+    <br>
+
+    <button id="speak" >Speak</button>
+
+    
+
+    <script src="./main.js">
+
+
+
+
+var text = document.getElementById("text")
+var speak = document.getElementById("speak")
+
+
+speak.addEventListener("click" , ()=>{
+
+    var texts = text.value 
+
+    
+
+var talk = new SpeechSynthesisUtterance(texts)
+// talk.pitch() = 1;  
+// talk.volume() = 1;  
+// talk.rate() = 3.5; 
+talk.lang ="en US" 
+
+alert(texts)
+
+
+window.SpeechSynthesis.speak(talk);
+
+})
+    </script>
+</body>
+</html>
